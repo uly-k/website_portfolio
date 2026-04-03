@@ -1,0 +1,30 @@
+.header {
+  padding-left: 16px;
+}
+
+.header__line {
+  margin-top: 8px;
+  height: 3px;
+  background: black;
+}
+
+.shapka {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 16px;
+
+  
+}
+
+#pr {
+  font-size: 24px;
+}
+
+
+#prj {
+  
+  font-size: 24px;
+  padding-right: 80px;
+}

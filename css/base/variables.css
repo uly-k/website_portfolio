@@ -1,0 +1,12 @@
+:root {
+  --font-main: 'Inter Tight', sans-serif;
+
+  --fs-h1: 128px;
+  --fs-h2: 64px;
+  --fs-a: 64px;
+  --fs-p: 18px;
+  --ls: -0.03em;
+  --lh: 100%;
+  --line: 3px;
+}
+

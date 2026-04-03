@@ -1,0 +1,205 @@
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typography.css');
+
+@import url('./layout/header.css');
+@import url('./layout/grid.css');
+
+@import url('./components/card.css');
+@import url('./components/about.css');
+
+
+a, button, .card {
+  cursor: url("/media/kursor.png"), pointer;
+}
+
+#pr {
+  color:red;
+}
+
+#pr:hover {
+  color:rgb(66, 21, 21);
+}
+
+#pr {
+  opacity: 0;               /* изначально прозрачная */
+  pointer-events: none;     /* чтобы нельзя было кликнуть, пока скрыта */
+  transition: opacity 0.5s ease;  /* плавное проявление за 0.5s */
+}
+
+#pr.visible {
+  opacity: 1;
+  pointer-events: auto;     /* активна, когда видна */
+}
+
+
+/* ========================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ======================================== */
+
+@media (max-width: 768px) {
+  
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+  
+  .scroll-container {
+    display: block !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    padding: 0 16px !important;
+  }
+  
+  /* Заголовки */
+  h1, .header__title {
+    font-size: 48px !important;
+  }
+  
+  h2 {
+    font-size: 36px !important;
+  }
+  
+  /* ГЛАВНАЯ СТРАНИЦА - сбрасываем всё */
+  .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  /* ВСЕ секции на главной - видимые */
+  .grid > * {
+    display: block !important;
+    width: 100% !important;
+    min-width: auto !important;
+    max-width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+  
+  /* Секция обо мне */
+  .col--about {
+    padding-top: 16px !important;
+    margin-bottom: 32px !important;
+  }
+  
+  .about__bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  
+  .about__avatar img {
+    width: 80px !important;
+  }
+  
+  /* Секция bio */
+  .col--bio {
+    padding-right: 0 !important;
+    margin-bottom: 32px !important;
+  }
+  
+  /* ========================================
+     ПРОЕКТЫ - ОБЯЗАТЕЛЬНО ВИДНЫ
+     ======================================== */
+  
+  .col--F,
+  .col--4,
+  .col--5 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    border: none !important;
+  }
+  
+  .card p {
+    order: 1 !important;
+    padding: 16px 0 12px 0 !important;
+    font-size: 18px !important;
+    display: block !important;
+  }
+  
+  .card img {
+    order: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    position: relative !important;
+  }
+  
+  /* Футер */
+  .col--footer {
+    display: flex !important;
+    justify-content: flex-end !important;
+    text-align: right !important;
+    padding: 32px 0 !important;
+    border-top: 3px solid black !important;
+    margin-top: 32px !important;
+  }
+  
+  /* --- СТРАНИЦЫ ПРОЕКТОВ --- */
+  
+  .gridenso {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+  
+  .gridenso > * {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  /* Шапка проектов */
+  .shapka {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  #pr {
+    font-size: 20px !important;
+    opacity: 1 !important;
+  }
+  
+  /* Фотографии - без расстояний */
+  .cardpro {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  
+  .cardpro img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  .col--one,
+  .col--5 {
+    gap: 0 !important;
+  }
+  
+  .col--one .cardpro,
+  .col--5 .cardpro {
+    margin: 0 !important;
+  }
+  
+  /* Отключаем след курсора */
+  div[style*="position: fixed"][style*="pointer-events: none"] {
+    display: none !important;
+  }
+}

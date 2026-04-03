@@ -1,0 +1,38 @@
+
+
+.about_bottom {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+
+  a {
+    font-size: 64px;
+  }
+}
+
+.col--bio{
+  padding-right: 150px;
+  padding-top: 16px;
+}
+
+.bio__text div{
+  
+  padding-bottom: 8px;
+  line-height: 130%;
+}
+
+.col--about{
+  padding-top: 16px;
+  
+}
+
+.about__enso {
+  display: flex;
+  flex-direction: column;
+  padding-right: 120px;
+  line-height: 160%;
+  gap: 8px;
+  
+}
